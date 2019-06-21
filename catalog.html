@@ -52,9 +52,65 @@
     <section class="filters">
       <h2>Фильтр:</h2>
       <h3>Стоимость</h3>
-      <h3>Цвет</h3>
-      <h3>Bluetooth</h3>
-      <!-- Здесь будет форма -->
+      <!-- Здесь будет форма "Стоимость" -->
+
+      <form class="filters-form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset>
+          <legend>Цвет</legend>
+          <ul>
+            <li>
+              <input id="color-black" type="checkbox" name="black" checked>
+              <label for="color-black">
+                Черный
+              </label>
+            </li>
+            <li>
+              <input id="color-white" type="checkbox" name="white">
+              <label for="color-white">
+                Белый
+              </label>
+            </li>
+            <li>
+              <input id="color-blue" type="checkbox" name="blue" checked>
+              <label for="color-blue">
+                Синий
+              </label>
+            </li>
+            <li>
+              <input id="color-red" type="checkbox" name="red" checked>
+              <label for="color-red">
+                Красный
+              </label>
+            </li>
+            <li>
+              <input id="color-pink" type="checkbox" name="pink">
+              <label for="color-pink">
+                Розовый
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Bluetooth</legend>
+          <ul>
+            <li>
+              <input id="bluetooth-have" type="radio" name="bluetooth" value="have" checked>
+              <label for="bluetooth-have">
+                Есть
+              </label>
+            </li>
+            <li>
+              <input id="bluetooth-not-have" type="radio" name="bluetooth" value="not-have">
+              <label for="bluetooth-not-have">
+                Нет
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="button" type="submit">
+          Показать
+        </button>
+      </form>
     </section>
 
     <section class="catalog">

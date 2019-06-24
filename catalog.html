@@ -34,7 +34,7 @@
       <ul class="header-site-navigation__list">
         <li>
           <a href="catalog.html">Каталог товаров</a>
-          <ul>
+          <ul class="header-site-navigation__sub-list">
             <li>
               <a href="#">Виртуальная реальность</a>
             </li>
@@ -69,7 +69,7 @@
     <ul class="breadcrumbs__list">
       <li><a href="index.html">Главная</a></li>
       <li><a href="#">Каталог товаров</a></li>
-      <li><a>Моноподы для селфи</a></li>
+      <li class="breadcrumbs__item--current">Моноподы для селфи</li>
     </ul>
 
     <!-- Здесь будет Сортировка -->
@@ -84,7 +84,7 @@
           <legend>Цвет</legend>
           <ul>
             <li>
-              <input id="color-black" type="checkbox" name="black" checked>
+              <input id="color-black" class="filters__input" type="checkbox" name="black" checked>
               <label for="color-black">
                 Черный
               </label>
@@ -147,7 +147,7 @@
             <a class="catalog__item-title" href="#">Любительская селфи-палка</a>
           </h3>
           <a class="catalog__item-image" href="#">
-            <img src="img/selfie-stick-unprofessional.jpg" width="250" height="263" alt
+            <img src="img/selfie-stick-unprofessional.jpg" width="360" height="380" alt
             ="Любительская селфи-палка">
           </a>
           <p>500 руб.</p>
@@ -158,7 +158,7 @@
             <a class="catalog__item-title" href="#">Профессиональная селфи-палка</a>
           </h3>
           <a class="catalog__item-image" href="#">
-            <img src="img/selfie-stick-professional.jpg" width="250" height="263" alt
+            <img src="img/selfie-stick-professional.jpg" width="360" height="380" alt
             ="Профессиональная селфи-палка">
           </a>
           <p>1500 руб.</p>
@@ -169,7 +169,7 @@
             <a class="catalog__item-title" href="#">Непотопляемая селфи-палка</a>
           </h3>
           <a class="catalog__item-image" href="#">
-            <img src="img/selfie-stick-unsinkable.jpg" width="250" height="263" alt
+            <img src="img/selfie-stick-unsinkable.jpg" width="360" height="380" alt
             ="Непотопляемая селфи-палка">
           </a>
           <p>2500 руб.</p>
@@ -180,7 +180,7 @@
             <a class="catalog__item-title" href="#">Селфи-палка «Следуй за мной»</a>
           </h3>
           <a class="catalog__item-image" href="#">
-            <img src="img/selfie-stick-follow-me.jpg" width="250" height="263" alt
+            <img src="img/selfie-stick-follow-me.jpg" width="360" height="380" alt
             ="Селфи-палка «Следуй за мной»">
           </a>
           <p>4900 руб.</p>
@@ -192,34 +192,36 @@
 
 
   <footer>
-    <a class="footer__logo" href="index.html">
-      <img src="img/logo-footer.svg" width="163" height="35" alt
-      ="Логотип интернет-магазина гаджетов «Девайс»">
-    </a>
-    <ul class="footer-user-navigation__list">
-      <li><a href="#">Валентин Петухов</a></li>
-      <li><a href="#">Выйти</a> </li>
-      <li><a href="#">Сравнить</a></li>
-      <li><a href="#">Корзина</a></li>
-    </ul>
+    <div class="footer-container">
+      <a class="footer__logo" href="index.html">
+        <img src="img/logo-footer.svg" width="163" height="35" alt
+        ="Логотип интернет-магазина гаджетов «Девайс»">
+      </a>
+      <ul class="footer-user-navigation__list">
+        <li><a href="#">Валентин Петухов</a></li>
+        <li><a href="#">Выйти</a> </li>
+        <li><a href="#">Сравнить</a></li>
+        <li><a href="#">Корзина</a></li>
+      </ul>
 
-    <p>г.Москва,ул.Строителей,15</p>
-    <ul class="footer-site-navigation__list">
-      <li><a href="#">Доставка</a></li>
-      <li><a href="#">Гарантия</a></li>
-      <li><a href="#">Контакты</a></li>
-    </ul>
-    <p>Тел.:+7(495)495-95-95</p>
+      <p>г.Москва,ул.Строителей,15</p>
+      <ul class="footer-site-navigation__list">
+        <li><a href="#">Доставка</a></li>
+        <li><a href="#">Гарантия</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+      <p>Тел.:+7(495)495-95-95</p>
 
-    <ul class="footer-social__list">
-      <li><a class="footer-social__button" href="#">Фейсбук</a></li>
-      <li><a class="footer-social__button" href="#">Инстаграм</a></li>
-      <li><a class="footer-social__button" href="#">Твиттер</a></li>
-    </ul>
-    <a class="footer-site-maker__logo" href="https://htmlacademy.ru">
-      <img src="img/logo-htmlacademy.svg" width="27" height="35" alt
-      ="Сайт разработан студией «htmlacademy»">
-    </a>
+      <ul class="footer-social__list">
+        <li><a class="footer-social__button" href="#">Фейсбук</a></li>
+        <li><a class="footer-social__button" href="#">Инстаграм</a></li>
+        <li><a class="footer-social__button" href="#">Твиттер</a></li>
+      </ul>
+      <a class="footer-site-maker__logo" href="https://htmlacademy.ru">
+        <img src="img/logo-htmlacademy.svg" width="27" height="35" alt
+        ="Сайт разработан студией «htmlacademy»">
+      </a>
+    </div>
   </footer>
 
 </body>

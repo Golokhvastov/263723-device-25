@@ -10,46 +10,46 @@
 <body>
 
   <header class="main-header">
-    <nav class="main-navigation">
-      <a class="main-header-logo" href="index.html">
+    <nav class="main-header__navigation">
+      <a class="main-header__logo" href="index.html">
         <img src="img/logo.svg" width="114" height="25" alt
         ="Логотип интернет-магазина гаджетов «Девайс»">
       </a>
 
-      <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+      <form class="main-header-search__form" action="https://echo.htmlacademy.ru" method="post">
         <p>
           <label for="search" class="visually-hidden">Поиск по сайту:</label>
           <input id="search" type="text" name="search" value="" placeholder="Поиск по сайту">
         </p>
-        <button class="search-button" type="submit">Найти</button>
+        <button class="main-header-search__button" type="submit">Найти</button>
       </form>
 
-      <ul class="header-user-navigation">
+      <ul class="main-header-user-navigation__list">
         <li><a href="#">Войти</a></li>
         <li><a href="#">Сравнить</a></li>
         <li><a href="#">Корзина</a></li>
       </ul>
 
-      <ul class="header-site-navigation">
+      <ul class="main-header-site-navigation__list">
         <li>
           <a href="catalog.html">Каталог товаров</a>
-          <ul class="header-site-navigation__catalog-list">
-            <li class="header-site-navigation__catalog-item">
+          <ul>
+            <li>
               <a href="#">Виртуальная реальность</a>
             </li>
-            <li class="header-site-navigation__catalog-item">
+            <li>
               <a href="#">Моноподы для селфи</a>
             </li>
-            <li class="header-site-navigation__catalog-item">
+            <li>
               <a href="#">Экшн-камеры</a>
             </li>
-            <li class="header-site-navigation__catalog-item">
+            <li>
               <a href="#">Фитнес-браслеты</a>
             </li>
-            <li class="header-site-navigation__catalog-item">
+            <li>
               <a href="#">Умные часы</a>
             </li>
-            <li class="header-site-navigation__catalog-item">
+            <li>
               <a href="#">Квадрокоптеры</a>
             </li>
           </ul>
@@ -72,12 +72,12 @@
         каждом из нас.</p>
       <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE
       работает со многими транспортными компаниями:</p>
-      <ul class="transport-company-list">
+      <ul class="transport-company__list">
         <li>Деловые Линии</li>
         <li>Автотрейдинг</li>
         <li>ЖелДорЭкспедиция</li>
       </ul>
-      <a class="button main-link main-about-us-link" href="#">Подробнее о нас</a>
+      <a class="button  main__link  main__link--main-about-us" href="#">Подробнее о нас</a>
     </section>
 
     <section class="main-contacts">
@@ -88,37 +88,37 @@
         <img src="img/map.jpg" width="389" height="155" alt
         ="Офис магазина «Девайс» по адресу: Москва, улица Строителей, 15">
       </a>
-      <a class="button main-link main-contacts-link" href="#">Напишите нам</a>
+      <a class="button  main__link  main__link--main-contacts" href="#">Напишите нам</a>
     </section>
 
   </main>
 
 
   <footer>
-    <a class="main-footer-logo" href="index.html">
+    <a class="main-footer__logo" href="index.html">
       <img src="img/logo.svg" width="114" height="25" alt
       ="Логотип интернет-магазина гаджетов «Девайс»">
     </a>
-    <ul class="footer-user-navigation">
+    <ul class="main-footer-user-navigation__list">
       <li><a href="#">Войти</a></li>
       <li><a href="#">Сравнить</a></li>
       <li><a href="#">Корзина</a></li>
     </ul>
 
     <p>г.Москва,ул.Строителей,15</p>
-    <ul class="footer-site-navigation">
+    <ul class="main-footer-site-navigation__list">
       <li><a href="#">Доставка</a></li>
       <li><a href="#">Гарантия</a></li>
       <li><a href="#">Контакты</a></li>
     </ul>
     <p>Тел.:+7(495)495-95-95</p>
 
-    <ul class="footer-social">
-      <li><a class="social-button" href="#">Фейсбук</a></li>
-      <li><a class="social-button" href="#">Инстаграм</a></li>
-      <li><a class="social-button" href="#">Твиттер</a></li>
+    <ul class="main-footer-social__list">
+      <li><a class="main-footer-social__button" href="#">Фейсбук</a></li>
+      <li><a class="main-footer-social__button" href="#">Инстаграм</a></li>
+      <li><a class="main-footer-social__button" href="#">Твиттер</a></li>
     </ul>
-    <a class="site-maker" href="https://htmlacademy.ru">
+    <a class="main-footer-site-maker__logo" href="https://htmlacademy.ru">
       <img src="img/logo-htmlacademy.svg" width="19" height="25" alt
       ="Сайт разработан студией «htmlacademy»">
     </a>
@@ -129,16 +129,16 @@
     <h2 class="visually-hidden">
       Написать письмо
     </h2>
-    <form class="modal-message-form" action="https://echo.htmlacademy.ru" method="post">
-      <p class="modal-message-item">
+    <form class="modal-message__form" action="https://echo.htmlacademy.ru" method="post">
+      <p class="modal-message__item">
         <label for="message-name">Ваше имя:</label>
         <input id="message-name" type="text" name="name" value="" placeholder="Имя Фамилия">
       </p>
-      <p class="modal-message-item">
+      <p class="modal-message__item">
         <label for="message-email">Ваш e-mail:</label>
         <input id="message-email" type="text" name="email" value="" placeholder="email@example.com">
       </p>
-      <p class="modal-message-item">
+      <p class="modal-message__item">
         <label for="message-text">Текст письма:</label>
         <input id="message-text" type="text" name="text" value="" placeholder="В свободной форме">
       </p>
@@ -146,7 +146,7 @@
         Отправить
       </button>
     </form>
-    <button class="modal-close" type="button">
+    <button class="modal-close__button" type="button">
       Закрыть
     </button>
   </section>
@@ -159,7 +159,7 @@
       <img src="img/map-big-jpg.jpg" width="960" height="559" alt
       ="Офис магазина «Девайс» по адресу: Москва, улица Строителей, 15">
     </p>
-    <button class="modal-close" type="button">
+    <button class="modal-close__button" type="button">
       Закрыть
     </button>
   </section>

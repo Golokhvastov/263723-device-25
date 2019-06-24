@@ -276,6 +276,15 @@ a {
   color: #ffffff;
 }
 
+.footer__logo:hover,
+.footer__logo:focus {
+  opacity: 0.6;
+}
+
+.footer__logo:active {
+  opacity: 0.3;
+}
+
 .footer-user-navigation__list,
 .footer-site-navigation__list,
 .footer-social__list {
@@ -288,6 +297,15 @@ a {
   letter-spacing: normal;
 }
 
+.footer-user-navigation__list a:hover,
+.footer-user-navigation__list a:focus {
+  opacity: 1;
+}
+
+.footer-user-navigation__list a:active {
+  opacity: 0.3;
+}
+
 .footer-site-navigation__list a {
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
@@ -298,12 +316,40 @@ a {
   text-transform: uppercase;
 }
 
+.footer-site-navigation__list a:hover,
+.footer-site-navigation__list a:focus {
+  opacity: 0.6;
+}
+
+.footer-site-navigation__list a:active {
+  opacity: 0.3;
+}
+
 .footer-social__list {
   text-align: center;
 }
 
 .footer-social__list a {
   color: #ffffff;
+  opacity: 0.3;
+}
+
+.footer-social__list a:hover,
+.footer-social__list a:focus {
+  opacity: 0.6;
+}
+
+.footer-social__list a:active {
+  opacity: 0.1;
+}
+
+.footer-site-maker__logo:hover,
+.footer-site-maker__logo:focus {
+  opacity: 0.6;
+}
+
+.footer-site-maker__logo:active {
+  opacity: 0.3;
 }
 
 .modal {

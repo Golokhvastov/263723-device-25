@@ -35,26 +35,26 @@ a {
   text-decoration: none;
 }
 
-.main-header__logo:hover,
-.main-header__logo:focus {
+.header__logo:hover,
+.header__logo:focus {
   opacity: 0.6;
 }
 
-.main-header__logo:active {
+.header__logo:active {
   opacity: 0.3;
 }
 
-.main-header-search__input {
+.header-search__input {
   background: transparent;
   border: none;
   opacity: 0.3;
 }
 
-.main-header-search__input:hover {
+.header-search__input:hover {
   opacity: 0.6;
 }
 
-.main-header-search__input:focus {
+.header-search__input:focus {
   opacity: 1;
   border-bottom: 2px solid #000000;
 
@@ -62,45 +62,45 @@ a {
   outline: none;
 }
 
-.main-header-search__button {
+.header-search__button {
   background: transparent;
   border: solid 2px #000000;
 }
 
-.main-header-search__button:hover,
-.main-header-search__button:focus {
+.header-search__button:hover,
+.header-search__button:focus {
   color: #ffffff;
   background: #000000;
 }
 
-.main-header-search__button:active {
+.header-search__button:active {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.main-header-user-navigation__list,
-.main-header-site-navigation__list,
-.main-header-site-navigation__sub-list {
+.header-user-navigation__list,
+.header-site-navigation__list,
+.header-site-navigation__sub-list {
   list-style: none;
 }
 
-.main-header-user-navigation__list a,
-.main-header-site-navigation__list a {
+.header-user-navigation__list a,
+.header-site-navigation__list a {
   color: #000000;
 }
 
-.main-header-user-navigation__list a:hover,
-.main-header-user-navigation__list a:focus,
-.main-header-site-navigation__list a:hover,
-.main-header-site-navigation__list a:focus {
+.header-user-navigation__list a:hover,
+.header-user-navigation__list a:focus,
+.header-site-navigation__list a:hover,
+.header-site-navigation__list a:focus {
   opacity: 0.6;
 }
 
-.main-header-user-navigation__list a:active,
-.main-header-site-navigation__list a:active {
+.header-user-navigation__list a:active,
+.header-site-navigation__list a:active {
   opacity: 0.3;
 }
 
-.main-header-site-navigation__list a {
+.header-site-navigation__list a {
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -109,11 +109,35 @@ a {
   text-transform: uppercase;
 }
 
-.main-header-site-navigation__sub-list a {
+.header-site-navigation__sub-list a {
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
   letter-spacing: 0.15px;
   text-transform: none;
+}
+
+
+.main-container h1,
+.main-container h2 {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 47px;
+  line-height: 56px;
+  font-weight: 800;
+  letter-spacing: 0.47px;
+}
+
+.main-about-us p,
+.main-contacts p {
+  letter-spacing: normal;
+}
+
+.transport-company__list {
+  list-style: none;
+
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 800;
 }

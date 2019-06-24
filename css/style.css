@@ -25,7 +25,10 @@ body {
   letter-spacing: 0.15px;
   color: #000000;
 
-  background: #ffffff;
+  background: linear-gradient(
+    #ffffff 40px,
+    rgba( 240, 197, 46, 0.5) 40px, rgba( 240, 197, 46, 0.5) 339px,
+    #ffffff 339px);
 }
 
 a {

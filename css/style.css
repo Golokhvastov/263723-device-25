@@ -34,3 +34,12 @@ body {
 a {
   text-decoration: none;
 }
+
+.main-header__logo:hover,
+.main-header__logo:focus {
+  opacity: 0.6;
+}
+
+.main-header__logo:active {
+  opacity: 0.3;
+}

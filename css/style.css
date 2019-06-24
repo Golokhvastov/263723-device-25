@@ -170,3 +170,46 @@ a {
   line-height: 40px;
   font-weight: 800;
 }
+
+
+.footer-container {
+  background-color: #464646;
+}
+
+.footer-container p {
+  color: #ffffff;
+}
+
+.footer-user-navigation__list,
+.footer-site-navigation__list,
+.footer-social__list {
+  list-style: none;
+}
+
+.footer-user-navigation__list a {
+  color: #ffffff;
+  opacity: 0.7;
+  letter-spacing: normal;
+}
+
+.footer-site-navigation__list a {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  letter-spacing: 3.6px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.footer-social__list {
+  text-align: center;
+}
+
+.footer-social__list a {
+  color: #ffffff;
+}
+
+.modal {
+  display: none;
+}

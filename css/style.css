@@ -175,6 +175,10 @@ a {
 
 
 .breadcrumbs__list {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.14px;
+
   list-style: none;
 }
 
@@ -375,7 +379,7 @@ html,
 body {
   /* Временно для сетки */
   min-width: 1440px;
-  min-height: 2795px;
+  /* min-height: 2795px; */
 }
 
 body {
@@ -401,6 +405,11 @@ body > * > * {
     rgba(255, 255, 0, 0.7) 1px,
     rgba(255, 255, 0, 0.3) 1px, rgba(255, 255, 0, 0.3) calc(100% - 1px),
     rgba(255, 255, 0, 0.7) calc(100% - 1px));
+
+  /* background: linear-gradient(
+    rgba(100, 0, 0, 0.7) 1px,
+    rgba(100, 0, 0, 0.3) 1px, rgba(100, 0, 0, 0.3) calc(100% - 1px),
+    rgba(100, 0, 0, 0.7) calc(100% - 1px)); */
 }
 
 body > * > * > * {
@@ -601,6 +610,67 @@ body > * > * > * > * > * {
 .footer-site-maker__logo {
   width: 27px;
   height: 35px;
+}
+
+
+
+
+
+
+.inner-page {
+  background-image: url("../Device-Catalog.png");
+}
+
+.inner-page .header-site-navigation__sub-list {
+  /* Временно для сетки */
+  display: none;
+}
+
+.inner-page .header {
+  margin-bottom: 80px;
+}
+
+
+
+.page-title {
+  padding-left: 60px;
+  margin-bottom: 18px
+}
+
+.breadcrumbs__list {
+  padding-left: 60px;
+  display: flex;
+
+  /* Временно для сетки */
+  margin-bottom: 184px;
+}
+
+.breadcrumbs__list li {
+  margin-right: 37px;
+}
+
+.inner-page-columns {
+  display: flex;
+  justify-content: space-between;
+
+  /* Временно для сетки */
+  margin-bottom: 134px;
+}
+
+.filters {
+  margin-left: 58px;
+  width: 202px;
+}
+
+.catalog {
+  width: 760px;
+}
+
+.catalog__item {
+  display: inline-block;
+
+  min-height: 440px;
+  margin-bottom: 68px;
 }
 
 

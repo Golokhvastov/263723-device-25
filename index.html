@@ -9,26 +9,28 @@
 </head>
 <body>
 
-  <header class="header">
+  <header class="container header">
     <nav class="header__navigation">
       <a class="header__logo" href="index.html">
         <img src="img/logo.svg" width="163" height="35" alt
         ="Логотип интернет-магазина гаджетов «Девайс»">
       </a>
 
-      <form class="header-search__form" action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label for="search" class="visually-hidden">Поиск по сайту:</label>
-          <input id="search" class="header-search__input" type="text" name="search" value="" placeholder="Поиск по сайту">
-        </p>
-        <button class="header-search__button" type="submit">Найти</button>
-      </form>
+      <div class="header__second-line">
+        <form class="header-search__form" action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label for="search" class="visually-hidden">Поиск по сайту:</label>
+            <input id="search" class="header-search__input" type="text" name="search" value="" placeholder="Поиск по сайту">
+          </p>
+          <button class="header-search__button" type="submit">Найти</button>
+        </form>
 
-      <ul class="header-user-navigation__list">
-        <li><a href="#">Войти</a></li>
-        <li><a href="#">Сравнить</a></li>
-        <li><a href="#">Корзина</a></li>
-      </ul>
+        <ul class="header-user-navigation__list">
+          <li><a href="#">Войти</a></li>
+          <li><a href="#">Сравнить</a></li>
+          <li><a href="#">Корзина</a></li>
+        </ul>
+      </div>
 
       <ul class="header-site-navigation__list">
         <li>
@@ -62,67 +64,76 @@
   </header>
 
 
-  <main class="main-container">
+  <main class="container main-container">
 
     <h1 class="visually-hidden">Интернет-магазин гаджетов «Девайс»</h1>
 
-    <section class="main-about-us">
-      <h2>О нас</h2>
-      <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в
-        каждом из нас.</p>
-      <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE
-      работает со многими транспортными компаниями:</p>
-      <ul class="transport-company__list">
-        <li>Деловые Линии</li>
-        <li>Автотрейдинг</li>
-        <li>ЖелДорЭкспедиция</li>
-      </ul>
-      <a class="button" href="#">Подробнее о нас</a>
-    </section>
+    <div class="main__info-line">
+      <section class="main-about-us">
+        <h2>О нас</h2>
+        <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в
+          каждом из нас.</p>
+        <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE
+        работает со многими транспортными компаниями:</p>
+        <ul class="transport-company__list">
+          <li>Деловые Линии</li>
+          <li>Автотрейдинг</li>
+          <li>ЖелДорЭкспедиция</li>
+        </ul>
+        <a class="button" href="#">Подробнее о нас</a>
+      </section>
 
-    <section class="main-contacts">
-      <h2>Контакты</h2>
-      <p>Вы можете забрать товар сама, заехав в наш офис. Заодно, вы сможете
-      проверить работоспособность покупки. Всякое бывает.</p>
-      <a class="map" href="#">
-        <img src="img/map.jpg" width="389" height="155" alt
-        ="Офис магазина «Девайс» по адресу: Москва, улица Строителей, 15">
-      </a>
-      <a class="button" href="#">Напишите нам</a>
-    </section>
+      <section class="main-contacts">
+        <h2>Контакты</h2>
+        <p>Вы можете забрать товар сама, заехав в наш офис. Заодно, вы сможете
+        проверить работоспособность покупки. Всякое бывает.</p>
+        <a class="map" href="#">
+          <img src="img/map.jpg" width="560" height="222" alt
+          ="Офис магазина «Девайс» по адресу: Москва, улица Строителей, 15">
+        </a>
+        <a class="button" href="#">Напишите нам</a>
+      </section>
+    </div>
 
   </main>
 
 
-  <footer>
-    <div class="footer-container">
-      <a class="footer__logo" href="index.html">
-        <img src="img/logo-footer.svg" width="163" height="35" alt
-        ="Логотип интернет-магазина гаджетов «Девайс»">
-      </a>
-      <ul class="footer-user-navigation__list">
-        <li><a href="#">Войти</a></li>
-        <li><a href="#">Сравнить</a></li>
-        <li><a href="#">Корзина</a></li>
-      </ul>
+  <footer class="footer-container">
+    <div class="container">
+      <div class="footer__first-line">
+        <a class="footer__logo" href="index.html">
+          <img src="img/logo-footer.svg" width="163" height="35" alt
+          ="Логотип интернет-магазина гаджетов «Девайс»">
+        </a>
+        <ul class="footer-user-navigation__list">
+          <li><a href="#">Войти</a></li>
+          <li><a href="#">Сравнить</a></li>
+          <li><a href="#">Корзина</a></li>
+        </ul>
+      </div>
 
-      <p>г.Москва,ул.Строителей,15</p>
-      <ul class="footer-site-navigation__list">
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Гарантия</a></li>
-        <li><a href="#">Контакты</a></li>
-      </ul>
-      <p>Тел.:+7(495)495-95-95</p>
+      <div class="footer__second-line">
+        <p>г. Москва, ул. Строителей, 15</p>
+        <ul class="footer-site-navigation__list">
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Гарантия</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+        <p class="text-right">Тел.: +7 (495) 495-95-95</p>
+      </div>
 
-      <ul class="footer-social__list">
-        <li><a class="footer-social__button" href="#">Фейсбук</a></li>
-        <li><a class="footer-social__button" href="#">Инстаграм</a></li>
-        <li><a class="footer-social__button" href="#">Твиттер</a></li>
-      </ul>
-      <a class="footer-site-maker__logo" href="https://htmlacademy.ru">
-        <img src="img/logo-htmlacademy.svg" width="27" height="35" alt
-        ="Сайт разработан студией «htmlacademy»">
-      </a>
+      <div class="footer__third-line">
+        <p class="footer__third-line--left-empty-block"></p>
+        <ul class="footer-social__list">
+          <li><a class="footer-social__button" href="#">Фейсбук</a></li>
+          <li><a class="footer-social__button" href="#">Инстаграм</a></li>
+          <li><a class="footer-social__button" href="#">Твиттер</a></li>
+        </ul>
+        <a class="footer-site-maker__logo" href="https://htmlacademy.ru">
+          <img src="img/logo-htmlacademy.svg" width="27" height="35" alt
+          ="Сайт разработан студией «htmlacademy»">
+        </a>
+      </div>
     </div>
   </footer>
 

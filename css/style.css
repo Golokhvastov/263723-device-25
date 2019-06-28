@@ -443,6 +443,7 @@ a {
 
   /* Временно для сетки */
   min-height: 139px;
+  display: none;
 }
 
 
@@ -535,22 +536,24 @@ a {
 
 .footer__third-line {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-}
 
-.footer__third-line--left-empty-block {
-  width: 27px;
+  position: relative;
 }
 
 .footer-social__list {
   display: flex;
   justify-content: space-between;
+
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-site-maker__logo {
   width: 27px;
   height: 35px;
+  position: absolute;
+  right: 0;
 }
 
 
@@ -621,7 +624,7 @@ a {
 
 /* Временно для сетки */
 .header {
-  margin-bottom: 1526px;
+  margin-bottom: 1685px;
 }
 
 .footer-container {

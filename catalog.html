@@ -18,42 +18,54 @@
 
       <div class="header__second-line">
         <form class="header-search__form" action="https://echo.htmlacademy.ru" method="post">
-          <p>
-            <label for="search" class="visually-hidden">Поиск по сайту:</label>
-            <input id="search" class="header-search__input" type="text" name="search" value="" placeholder="Поиск по сайту">
-          </p>
+          <label for="search" class="visually-hidden">Поиск по сайту:</label>
+          <input id="search" class="header-search__input" type="text" name="search" value="" placeholder="Поиск по сайту">
           <button class="header-search__button" type="submit">Найти</button>
         </form>
 
         <ul class="header-user-navigation__list">
-          <li><a href="#">Валентин Петухов</a></li>
-          <li><a href="#">Выйти</a> </li>
-          <li><a href="#">Сравнить</a></li>
-          <li><a href="#">Корзина</a></li>
+          <li><a class="header-user-navigation__link--user" href="#">Валентин Петухов</a></li>
+          <li><a class="header-user-navigation__link--logout" href="#">Выйти</a></li>
+          <li><a class="header-user-navigation__link--compare" href="#">Сравнить</a></li>
+          <li><a class="header-user-navigation__link--cart" href="#">Корзина</a></li>
         </ul>
       </div>
 
       <ul class="header-site-navigation__list">
         <li>
-          <a href="catalog.html">Каталог товаров</a>
+          <a class="header-site-navigation__link--catalog" href="catalog.html">Каталог товаров</a>
           <ul class="header-site-navigation__sub-list">
             <li>
-              <a href="#">Виртуальная реальность</a>
+              <ul class="header-site-navigation__sub-list--column-1">
+                <li>
+                  <a href="#">Виртуальная реальность</a>
+                </li>
+                <li>
+                  <a href="catalog.html">Моноподы для селфи</a>
+                </li>
+                <li>
+                  <a href="#">Экшн-камеры</a>
+                </li>
+              </ul>
             </li>
+
             <li>
-              <a href="#">Моноподы для селфи</a>
+              <ul class="header-site-navigation__sub-list--column-2">
+                <li>
+                  <a href="#">Фитнес-браслеты</a>
+                </li>
+                <li>
+                  <a href="#">Умные часы</a>
+                </li>
+              </ul>
             </li>
+
             <li>
-              <a href="#">Экшн-камеры</a>
-            </li>
-            <li>
-              <a href="#">Фитнес-браслеты</a>
-            </li>
-            <li>
-              <a href="#">Умные часы</a>
-            </li>
-            <li>
-              <a href="#">Квадрокоптеры</a>
+              <ul class="header-site-navigation__sub-list--column-3">
+                <li>
+                  <a href="#">Квадрокоптеры</a>
+                </li>
+              </ul>
             </li>
           </ul>
         </li>
@@ -206,10 +218,10 @@
           ="Логотип интернет-магазина гаджетов «Девайс»">
         </a>
         <ul class="footer-user-navigation__list">
-          <li><a href="#">Валентин Петухов</a></li>
-          <li><a href="#">Выйти</a> </li>
-          <li><a href="#">Сравнить</a></li>
-          <li><a href="#">Корзина</a></li>
+          <li><a class="footer-user-navigation__link--user" href="#">Валентин Петухов</a></li>
+          <li><a class="footer-user-navigation__link--logout" href="#">Выйти</a></li>
+          <li><a class="footer-user-navigation__link--compare" href="#">Сравнить</a></li>
+          <li><a class="footer-user-navigation__link--cart" href="#">Корзина</a></li>
         </ul>
       </div>
 
@@ -224,11 +236,25 @@
       </div>
 
       <div class="footer__third-line">
-        <p class="footer__third-line--left-empty-block"></p>
         <ul class="footer-social__list">
-          <li><a class="footer-social__button" href="#">Фейсбук</a></li>
-          <li><a class="footer-social__button" href="#">Инстаграм</a></li>
-          <li><a class="footer-social__button" href="#">Твиттер</a></li>
+          <li>
+            <a class="footer-social__link--facebook" href="#">
+              <img src="img/icon-footer-facebook.svg" width="32" height="32" alt
+              ="Интернет-магазин гаджетов «Девайс» на Фейсбуке">
+            </a>
+          </li>
+          <li>
+            <a class="footer-social__link--instagram" href="#">
+              <img src="img/icon-footer-instagram.svg" width="32" height="32" alt
+              ="Интернет-магазин гаджетов «Девайс» в Инстаграме">
+            </a>
+          </li>
+          <li>
+            <a class="footer-social__link--twitter" href="#">
+              <img src="img/icon-footer-twitter.svg" width="32" height="32" alt
+              ="Интернет-магазин гаджетов «Девайс» в Твиттере">
+            </a>
+          </li>
         </ul>
         <a class="footer-site-maker__logo" href="https://htmlacademy.ru">
           <img src="img/logo-htmlacademy.svg" width="27" height="35" alt

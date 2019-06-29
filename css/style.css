@@ -382,8 +382,9 @@ body {
 }
 
 body {
+  background-size: 1160px auto;
   /* Временно для сетки */
-  background-image: url("../Device-Index.png");
+  /* background-image: url("../Device-Index.png"); */
   /* background-image: url("../Device-Index-Modals.png"); */
   background-size: 1440px auto;
   background-repeat: no-repeat;
@@ -489,6 +490,7 @@ body .button {
 .header-user-navigation__link--user {
   position: relative;
   padding-left: 26px;
+  margin-right: 19px;
 }
 
 .header-user-navigation__link--user::before {
@@ -505,6 +507,10 @@ body .button {
   background-image: url("../img/icon-user.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.header-user-navigation__link--logout {
+  opacity: 0.3;
 }
 
 .header-user-navigation__link--compare {
@@ -590,10 +596,14 @@ body .button {
 .header-site-navigation__sub-list {
   position: absolute;
 
-  padding-left: 1px;
   margin-top: 20px;
+
+  left: -59px;
+  width: 1040px;
+  padding-left: 60px;
+  padding-right: 60px;
+
   display: flex;
-  width: 100%;
 
   background-color: #f7e296;
 
@@ -749,8 +759,7 @@ body .button {
 
 .footer-user-navigation__list {
   display: flex;
-  min-width: 325px;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 
@@ -769,7 +778,7 @@ body .button {
 .footer-user-navigation__link--user {
   position: relative;
   padding-left: 26px;
-  padding-right: 3px;
+  margin-right: 19px;
 }
 
 .footer-user-navigation__link--user::before {
@@ -788,9 +797,16 @@ body .button {
   background-position: 0 0;
 }
 
+.footer-user-navigation__list .footer-user-navigation__link--logout {
+  opacity: 0.3;
+  margin-right: 19px;
+}
+
 .footer-user-navigation__link--compare {
   position: relative;
   padding-left: 23px;
+  margin-left: 22px;
+  margin-right: 39px;
 }
 
 .footer-user-navigation__link--compare::before {
@@ -905,13 +921,9 @@ body .button {
 
 
 
-/* .inner-page {
-  background-image: url("../Device-Catalog.png");
-} */
-
-.inner-page .header-site-navigation__sub-list {
+.inner-page {
   /* Временно для сетки */
-  display: none;
+  background-image: url("../Device-Catalog.png");
 }
 
 .inner-page .header {
@@ -969,11 +981,6 @@ body .button {
 /* Временно для сетки */
 .header {
   margin-bottom: 1685px;
-}
-
-.footer-container {
-  /* Временно для сетки */
-  background-color: rgba(70, 70, 70, 0.9);
 }
 
 /* Временно для сетки */

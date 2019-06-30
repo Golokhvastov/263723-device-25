@@ -122,7 +122,7 @@
           <form class="filters__form" action="https://echo.htmlacademy.ru" method="post">
             <fieldset>
               <legend>Цвет</legend>
-              <ul>
+              <ul class="filters__list">
                 <li>
                   <input id="color-black" class="filters__input" type="checkbox" name="black" checked>
                   <label for="color-black">
@@ -157,7 +157,7 @@
             </fieldset>
             <fieldset>
               <legend>Bluetooth</legend>
-              <ul>
+              <ul class="filters__list">
                 <li>
                   <input id="bluetooth-have" type="radio" name="bluetooth" value="have" checked>
                   <label for="bluetooth-have">
@@ -183,50 +183,135 @@
 
           <ul class="catalog__list">
             <li class="catalog__item">
-              <h3>
-                <a class="catalog__item-title" href="#">Любительская селфи-палка</a>
-              </h3>
-              <a class="catalog__item-image" href="#">
+              <div class="catalog__item--text">
+                <h3>
+                  <a class="catalog__item-title" href="#">Любительская селфи-палка</a>
+                </h3>
+                <div>
+                  <p class="visually-hidden">Цена:</p>
+                  <p>500 руб.</p>
+                </div>
+              </div>
+              <div class="catalog__item-image">
                 <img src="img/selfie-stick-unprofessional.jpg" width="360" height="380" alt
                 ="Любительская селфи-палка">
-              </a>
-              <p>500 руб.</p>
+              </div>
+
+              <div class="catalog-item__actions">
+                <button class="button buy" type="button">
+                  В корзину
+                </button>
+                <button class="catalog-item-actions__button--bookmark" type="button">
+                  Добавить к сравнению
+                </button>
+              </div>
             </li>
 
             <li class="catalog__item">
-              <h3>
-                <a class="catalog__item-title" href="#">Профессиональная селфи-палка</a>
-              </h3>
-              <a class="catalog__item-image" href="#">
+              <div class="catalog__item--text">
+                <h3>
+                  <a class="catalog__item-title" href="#">Профессиональная селфи-палка</a>
+                </h3>
+                <div>
+                  <p class="visually-hidden">Цена:</p>
+                  <p>1 500 руб.</p>
+                </div>
+              </div>
+              <div class="catalog__item-image">
                 <img src="img/selfie-stick-professional.jpg" width="360" height="380" alt
                 ="Профессиональная селфи-палка">
-              </a>
-              <p>1500 руб.</p>
+              </div>
+
+              <div class="catalog-item__actions">
+                <button class="button buy" type="button">
+                  В корзину
+                </button>
+                <button class="catalog-item-actions__button--bookmark" type="button">
+                  Добавить к сравнению
+                </button>
+              </div>
             </li>
 
             <li class="catalog__item">
-              <h3>
-                <a class="catalog__item-title" href="#">Непотопляемая селфи-палка</a>
-              </h3>
-              <a class="catalog__item-image" href="#">
+              <div class="catalog__item--text">
+                <h3>
+                  <a class="catalog__item-title" href="#">Непотопляемая селфи-палка</a>
+                </h3>
+                <div>
+                  <p class="visually-hidden">Цена:</p>
+                  <p>2 500 руб.</p>
+                </div>
+              </div>
+              <div class="catalog__item-image">
                 <img src="img/selfie-stick-unsinkable.jpg" width="360" height="380" alt
                 ="Непотопляемая селфи-палка">
-              </a>
-              <p>2500 руб.</p>
+              </div>
+
+              <div class="catalog-item__actions">
+                <button class="button buy" type="button">
+                  В корзину
+                </button>
+                <button class="catalog-item-actions__button--bookmark" type="button">
+                  Добавить к сравнению
+                </button>
+              </div>
             </li>
 
-            <li class="catalog__item">
-              <h3>
-                <a class="catalog__item-title" href="#">Селфи-палка «Следуй за мной»</a>
-              </h3>
-              <a class="catalog__item-image" href="#">
+            <li class="catalog__item  catalog__flag--new">
+              <div class="catalog__item--text">
+                <h3>
+                  <a class="catalog__item-title" href="#">Селфи-палка «Следуй за мной»</a>
+                </h3>
+                <div>
+                  <p class="visually-hidden">Цена:</p>
+                  <p>4 900 руб.</p>
+                </div>
+              </div>
+              <div class="catalog__item-image">
                 <img src="img/selfie-stick-follow-me.jpg" width="360" height="380" alt
                 ="Селфи-палка «Следуй за мной»">
-              </a>
-              <p>4900 руб.</p>
+              </div>
+
+              <div class="catalog-item__actions">
+                <button class="button buy" type="button">
+                  В корзину
+                </button>
+                <button class="catalog-item-actions__button--bookmark" type="button">
+                  Добавить к сравнению
+                </button>
+              </div>
             </li>
           </ul>
-          <!-- Здесь будет пагинация -->
+
+          <ul class="pagination__list">
+            <li>
+              <a class="pagination__button  pagination__button--back" href="#">
+                Назад
+              </a>
+            </li>
+            <li>
+              <ul class="pagination-numbers__list">
+                <li class="pagination-numbers__list--current">
+                    1
+                </li>
+                <li>
+                  <a href="#">
+                    2
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    3
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="pagination__button  pagination__button--forward" href="#">
+                Вперед
+              </a>
+            </li>
+          </ul>
         </section>
       </div>
     </div>

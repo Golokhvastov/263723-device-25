@@ -168,7 +168,7 @@
   </footer>
 
 
-  <section class="modal modal-message">
+  <section class="modal modal--message">
     <h2 class="visually-hidden">
       Написать письмо
     </h2>
@@ -183,29 +183,24 @@
       </p>
       <p class="modal-message__item">
         <label for="message-text">Текст письма:</label>
-        <input id="message-text" type="text" name="text" value="" placeholder="В свободной форме">
+        <textarea id="message-text" name="text" placeholder="В свободной форме"></textarea>
       </p>
-      <button class="button" type="submit">
-        Отправить
-      </button>
+      <div class="modal-message__button-container">
+        <button class="button" type="submit">
+          Отправить
+        </button>
+      </div>
     </form>
-    <button class="modal-close__button" type="button">
-      Закрыть
-    </button>
+    <button class="modal-close__button" type="button" aria-label="Закрыть"></button>
   </section>
 
-  <section class="modal modal-map">
+  <section class="modal modal--map">
     <h2 class="visually-hidden">
       Как до нас добраться
     </h2>
-    <p>
-      <img src="img/map-big-jpg.jpg" width="960" height="559" alt
-      ="Офис магазина «Девайс» по адресу: Москва, улица Строителей, 15">
-    </p>
-    <button class="modal-close__button" type="button">
-      Закрыть
-    </button>
+    <img src="img/map-big.jpg" width="960" height="559" alt
+    ="Офис магазина «Девайс» по адресу: Москва, улица Строителей, 15">
+    <button class="modal-close__button" type="button" aria-label="Закрыть"></button>
   </section>
-
 </body>
 </html>

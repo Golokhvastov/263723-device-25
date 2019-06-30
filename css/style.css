@@ -364,9 +364,6 @@ a {
   opacity: 0.3;
 }
 
-.modal {
-  display: none;
-}
 
 
 
@@ -382,11 +379,11 @@ body {
 }
 
 body {
-  background-size: 1160px auto;
+  background-size: 1160px 339px;
   /* Временно для сетки */
   /* background-image: url("../Device-Index.png"); */
-  /* background-image: url("../Device-Index-Modals.png"); */
-  /* background-size: 1440px auto; */
+  /* background-image: url("../Device-Index-Modals.png");
+  background-size: 1440px auto; */
   background-repeat: no-repeat;
   background-position: center top;
 }
@@ -1305,6 +1302,117 @@ body .button {
   margin-top: 0;
 }
 
+
+body {
+  position: relative;
+  /* background-image: none; */
+}
+
+.modal {
+  position: absolute;
+
+  left: 50%;
+  width: 960px;
+  margin-left: -480px;
+
+  box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
+}
+
+.modal--message {
+  top: 1057px;
+  min-height: 553px;
+}
+
+.modal-message__form {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 78px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.modal-message__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-message__item label {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  letter-spacing: normal;
+
+  margin-bottom: 7px;
+}
+
+.modal-message__item input,
+.modal-message__item textarea {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: normal;
+  color: rgba(70, 70, 70, 0.4);
+
+  width: 320px;
+  border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 14px;
+  padding-bottom: 17px;
+  margin-bottom: 4px;
+
+  background-color: #f2f2f2;
+  /* background: transparent; */
+}
+
+.modal-message__item textarea {
+  width: 720px;
+  height: 125px;
+  resize: none;
+}
+
+.modal-message__button-container {
+  margin-top: 22px;
+  width: 760px;
+}
+
+.modal--map {
+  top: 1852px;
+  height: 559px;
+}
+
+.modal-close__button {
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  position: absolute;
+  top: 22px;
+  right: 22px;
+
+  width: 55px;
+  height: 55px;
+
+  background: transparent;
+  background-image: url("../img/modal-close.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 0.5;
+}
+
+.modal-close__button:hover,
+.modal-close__button:focus {
+  opacity: 1;
+}
+
+.modal-close__button:active {
+  opacity: 0.3;
+}
 
 
 

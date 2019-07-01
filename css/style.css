@@ -382,9 +382,9 @@ body {
 body {
   background-size: 1160px 339px;
   /* Временно для сетки */
-  background-image: url("../Device-Index.png");
+  /* background-image: url("../Device-Index.png"); */
   /* background-image: url("../Device-Index-Modals.png"); */
-  background-size: 1440px auto;
+  /* background-size: 1440px auto; */
   background-repeat: no-repeat;
   background-position: center top;
 }
@@ -1322,6 +1322,8 @@ body {
   margin-left: -480px;
 
   box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
+
+  display: none;
 }
 
 .modal--message {

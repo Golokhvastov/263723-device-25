@@ -100,6 +100,7 @@ a {
 .header-search__button:focus {
   color: #ffffff;
   background: #000000;
+  opacity: 1;
 }
 
 .header-search__button:active {
@@ -381,9 +382,9 @@ body {
 body {
   background-size: 1160px 339px;
   /* Временно для сетки */
-  /* background-image: url("../Device-Index.png"); */
-  /* background-image: url("../Device-Index-Modals.png");
-  background-size: 1440px auto; */
+  background-image: url("../Device-Index.png");
+  /* background-image: url("../Device-Index-Modals.png"); */
+  background-size: 1440px auto;
   background-repeat: no-repeat;
   background-position: center top;
 }
@@ -452,6 +453,10 @@ body .button {
   flex-grow: 1;
 }
 
+.header-search__input:focus ~ .header-search__button {
+  opacity: 1;
+}
+
 .header-search__form::before {
   content: "";
 
@@ -471,6 +476,7 @@ body .button {
 .header-search__button {
   min-width: 85px;
   min-height: 49px;
+  opacity: 0;
 }
 
 .header-user-navigation__list {
@@ -894,6 +900,8 @@ body .button {
   display: flex;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 1px;
+  padding-left: 27px;
 }
 
 .footer-social__list li {
@@ -904,8 +912,6 @@ body .button {
 .footer-site-maker__logo {
   width: 27px;
   height: 35px;
-  position: absolute;
-  right: 0;
 }
 
 
@@ -1373,6 +1379,22 @@ body {
   width: 720px;
   height: 125px;
   resize: none;
+}
+
+.modal-message__item input:hover,
+.modal-message__item textarea:hover {
+  background-color: #eaeaea;
+}
+
+.modal-message__item input:focus,
+.modal-message__item textarea:focus {
+  color: #464646;
+  border: solid 3px rgba(240, 197, 46, 0.5);
+  background-color: #ffffff;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 11px;
+  padding-bottom: 14px;
 }
 
 .modal-message__button-container {

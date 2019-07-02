@@ -78,7 +78,7 @@
 
 
   <main>
-    <div class="container  main-container">
+    <div class="container  main-container  inner-page__main-container">
       <h1 class="page-title">Моноподы для селфи</h1>
 
       <ul class="breadcrumbs__list">
@@ -89,7 +89,7 @@
     </div>
 
     <div class="inner-page-sort__background">
-      <div class="inner-page-sort__flex-columns  container  main-container">
+      <div class="inner-page-sort__flex-columns  container  inner-page__main-container">
         <div class="inner-page-sort__column-1">
           <h3>Фильтр:</h3>
         </div>
@@ -113,43 +113,60 @@
     </div>
 
     <div class="inner-page-columns__background">
-      <div class="inner-page-columns__flex-columns  container  main-container">
+      <div class="inner-page-columns__flex-columns  container  inner-page__main-container">
         <section class="filters">
-          <!-- <h2>Фильтр:</h2>
-          <h3>Стоимость</h3> -->
-          <!-- Здесь будет форма "Стоимость" -->
-
           <form class="filters__form" action="https://echo.htmlacademy.ru" method="post">
+            <fieldset>
+              <legend>Стоимость</legend>
+              <div class="filters__range-filter">
+                <div class="filters__controls--range">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min"></div>
+                  <div class="toggle toggle-max"></div>
+                </div>
+                <div class="filters__controls--price">
+                  <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+                  <label class="max-price">до <input name="max-price" type="text" value="5000"></label>
+                </div>
+              </div>
+            </fieldset>
             <fieldset>
               <legend>Цвет</legend>
               <ul class="filters__list">
                 <li>
-                  <input id="color-black" class="filters__input" type="checkbox" name="black" checked>
-                  <label for="color-black">
+                  <label>
+                    <input class="visually-hidden" type="checkbox" name="black" checked>
+                    <span class="checkbox-indicator"></span>
                     Черный
                   </label>
                 </li>
                 <li>
-                  <input id="color-white" type="checkbox" name="white">
-                  <label for="color-white">
+                  <label>
+                    <input class="visually-hidden" type="checkbox" name="black">
+                    <span class="checkbox-indicator"></span>
                     Белый
                   </label>
                 </li>
                 <li>
-                  <input id="color-blue" type="checkbox" name="blue" checked>
-                  <label for="color-blue">
+                  <label>
+                    <input class="visually-hidden" type="checkbox" name="black" checked>
+                    <span class="checkbox-indicator"></span>
                     Синий
                   </label>
                 </li>
                 <li>
-                  <input id="color-red" type="checkbox" name="red" checked>
-                  <label for="color-red">
+                  <label>
+                    <input class="visually-hidden" type="checkbox" name="black" checked>
+                    <span class="checkbox-indicator"></span>
                     Красный
                   </label>
                 </li>
                 <li>
-                  <input id="color-pink" type="checkbox" name="pink">
-                  <label for="color-pink">
+                  <label>
+                    <input class="visually-hidden" type="checkbox" name="black">
+                    <span class="checkbox-indicator"></span>
                     Розовый
                   </label>
                 </li>
@@ -159,14 +176,16 @@
               <legend>Bluetooth</legend>
               <ul class="filters__list">
                 <li>
-                  <input id="bluetooth-have" type="radio" name="bluetooth" value="have" checked>
-                  <label for="bluetooth-have">
+                  <label>
+                    <input class="visually-hidden" type="radio" name="bluetooth" value="have" checked>
+                    <span class="radio-indicator"></span>
                     Есть
                   </label>
                 </li>
                 <li>
-                  <input id="bluetooth-not-have" type="radio" name="bluetooth" value="not-have">
-                  <label for="bluetooth-not-have">
+                  <label>
+                    <input class="visually-hidden" type="radio" name="bluetooth" value="not-have">
+                    <span class="radio-indicator"></span>
                     Нет
                   </label>
                 </li>

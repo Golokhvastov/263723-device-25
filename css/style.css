@@ -35,6 +35,14 @@ a {
   text-decoration: none;
 }
 
+
+
+* {
+  /* Временно для сетки */
+  margin: 0;
+  padding: 0;
+}
+
 .button {
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
@@ -86,21 +94,24 @@ a {
 .header-search__input:focus {
   opacity: 1;
   border-bottom: 2px solid #000000;
-
-  /* временно, чтобы было видно черную линию снизу формы при фокусе */
-  outline: none;
 }
 
 .header-search__button {
   background: transparent;
   border: solid 2px #000000;
+  z-index: -1;
 }
 
-.header-search__button:hover,
+.header-search__button:hover {
+  color: #ffffff;
+  background: #000000;
+}
+
 .header-search__button:focus {
   color: #ffffff;
   background: #000000;
   opacity: 1;
+  z-index: 0;
 }
 
 .header-search__button:active {
@@ -154,7 +165,7 @@ a {
 .main-container h2 {
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 47px;
-  line-height: 56px;
+  line-height: 48px;
   font-weight: 800;
   letter-spacing: 0.47px;
 }
@@ -376,17 +387,10 @@ html,
 body {
   /* Временно для сетки */
   min-width: 1440px;
-  /* min-height: 2795px; */
 }
 
 body {
   background-size: 1160px 339px;
-  /* Временно для сетки */
-  /* background-image: url("../Device-Index.png"); */
-  /* background-image: url("../Device-Index-Modals.png"); */
-  /* background-size: 1440px auto; */
-  background-repeat: no-repeat;
-  background-position: center top;
 }
 
 img {
@@ -454,6 +458,7 @@ body .button {
 }
 
 .header-search__input:focus ~ .header-search__button {
+  z-index: 0;
   opacity: 1;
 }
 
@@ -598,6 +603,7 @@ body .button {
 
 .header-site-navigation__sub-list {
   position: absolute;
+  z-index: 200;
 
   padding-top: 21px;
 
@@ -638,12 +644,6 @@ body .button {
   margin-bottom: 6px;
 }
 
-
-.main-container * {
-  margin: 0;
-  padding: 0;
-}
-
 .main__info-line {
   display: flex;
   justify-content: space-between;
@@ -671,7 +671,7 @@ body .button {
 
 .main-about-us h2,
 .main-contacts h2 {
-  margin-bottom: 40px;
+  margin-bottom: 43px;
 }
 
 .main-about-us__text p,
@@ -734,7 +734,7 @@ body .button {
 
 
 .footer-container {
-  margin-top: 84px;
+  margin-top: 85px;
   padding-top: 65px;
   padding-bottom: 66px;
 }
@@ -920,10 +920,7 @@ body .button {
 
 
 .inner-page {
-  /* Временно для сетки */
-  /* background-image: url("../Device-Catalog.png"); */
-  /* background-image: url("../Device-Catalog-Hovers.png"); */
-  background-size: 1160px 226px;
+
 }
 
 .inner-page .header {
@@ -933,8 +930,9 @@ body .button {
 
 
 .page-title {
-  padding-left: 60px;
-  margin-bottom: 18px
+  padding-left: 59px;
+  padding-top: 3px;
+  margin-bottom: 23px
 }
 
 .breadcrumbs__list {
@@ -1076,10 +1074,10 @@ body .button {
   padding-bottom: 78px;
 
   /* Временно для сетки */
-  /*
+
   background: linear-gradient(to right,
-    rgba(235, 235, 235, 0.7) calc(50% - 253px),
-    rgba(255, 255, 255, 0) calc(50% - 253px)); */
+    rgba(235, 235, 235, 0.5) calc(50% - 253px),
+    rgba(255, 255, 255, 0) calc(50% - 253px));
 }
 
 .inner-page-columns__flex-columns {
@@ -1091,13 +1089,18 @@ body .button {
   margin-top: 69px;
   margin-left: 59px;
   width: 202px;
-
-  /* Временно для сетки */
-  margin-top: 178px;
+  margin-top: 38px;
 }
 
 .filters__form fieldset {
+  padding: 0;
   margin-top: 43px;
+  position: relative;
+  padding-top: 18px;
+}
+
+.filters__form fieldset:nth-child(2) {
+  margin-top: 38px;
   position: relative;
   padding-top: 18px;
 }
@@ -1114,9 +1117,251 @@ body .button {
   background-color: black;
 }
 
-.filters__list li {
-  padding-left: 22px;
+.filters__controls--range {
+  position: relative;
+
+  /* height: 21px; */
+  margin-bottom: 9px;
+  padding-top: 17px;
+  padding-left: 5px;
+  padding-right: 2px;
 }
+
+.filters__controls--range  .scale {
+  height: 2px;
+
+  background: #dbdbdb;
+}
+
+.filters__controls--range  .bar {
+  width: 110px;
+  height: 2px;
+
+  background: #91c92f;
+}
+
+.filters__controls--range  .toggle {
+  position: absolute;
+  top: 7px;
+  left: 0;
+
+  width: 4px;
+  height: 4px;
+  padding: 0;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.filters__controls--range  .toggle:active {
+  border: 9px solid #ffffff;
+  margin-left: -1px;
+  margin-top: -1px;
+}
+
+.filters__controls--range  .toggle-min {
+  left: -5px;
+}
+
+.filters__controls--range  .toggle-max {
+  left: 108px;
+}
+
+.filters__controls--price {
+  font-size: 0;
+}
+
+.filters__controls--price  label {
+  display: inline-block;
+
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  letter-spacing: normal;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.filters__controls--price  input {
+  width: 55px;
+  padding: 0;
+  /* margin-left: 10px; */
+
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  letter-spacing: normal;
+  color: rgba(0, 0, 0, 0.2);
+
+  border: none;
+  background: transparent;
+}
+
+.filters__controls--price  .min-price {
+  margin-right: 17px;
+}
+
+.filters__list li {
+  padding-left: 39px;
+}
+
+
+
+
+.filters__list li {
+  position: relative;
+}
+
+.filters__list label {
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+/* .login-checkbox:hover,
+.login-checkbox:focus {
+  color: #663d15;
+} */
+
+.filters__list input[type="checkbox"] + .checkbox-indicator {
+  position: absolute;
+  top: 8px;
+  left: -1px;
+
+  width: 19px;
+  height: 19px;
+
+  border: 2px solid #000000;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.filters__list input[type="checkbox"]:focus + .checkbox-indicator {
+  border-color: rgba(0, 0, 0, 0.6);
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.filters__list input[type="checkbox"]:hover + .checkbox-indicator,
+.filters__list input[type="checkbox"] + .checkbox-indicator:hover {
+  border-color: rgba(0, 0, 0, 0.6);
+}
+
+.filters__list input[type="checkbox"]:active + .checkbox-indicator {
+  border-color: #000000;
+}
+
+.filters__list input[type="checkbox"]:checked + .checkbox-indicator::before {
+  content: "";
+
+  position: absolute;
+  z-index: 2;
+  top: 9px;
+  left: 2.5px;
+
+  width: 10.5px;
+  height: 3.5px;
+
+  background-color: #000000;
+  transform: rotate(45deg);
+}
+
+.filters__list input[type="checkbox"]:checked:hover + .checkbox-indicator::before,
+.filters__list input[type="checkbox"]:checked:focus + .checkbox-indicator::before {
+  background-color: rgb(102, 102, 102);
+}
+
+.filters__list input[type="checkbox"]:checked:active + .checkbox-indicator::before {
+  background-color: #000000;
+}
+
+.filters__list input[type="checkbox"]:checked + .checkbox-indicator::after {
+  content: "";
+
+  position: absolute;
+  z-index: 1;
+  top: 5.5px;
+  left: 7.1px;
+
+  width: 18px;
+  height: 3.5px;
+
+  background-color: #000000;
+  box-shadow: 5px 0 0 2px #ebebeb;
+  transform: rotate(-45deg);
+}
+
+.filters__list input[type="checkbox"]:checked:hover + .checkbox-indicator::after,
+.filters__list input[type="checkbox"]:checked:focus + .checkbox-indicator::after {
+  background-color: rgb(102, 102, 102);
+}
+
+.filters__list input[type="checkbox"]:checked:active + .checkbox-indicator::after {
+  background-color: #000000;
+}
+
+
+
+.filters__list input[type="radio"] + .radio-indicator {
+  position: absolute;
+  top: 6px;
+  left: -1px;
+
+  width: 17px;
+  height: 17px;
+
+  border: 4px solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.filters__list input[type="radio"]:focus + .radio-indicator {
+  border-color: rgba(0, 0, 0, 0.6);
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.filters__list input[type="radio"]:hover + .radio-indicator,
+.filters__list input[type="radio"] + .radio-indicator:hover {
+  border-color: rgba(0, 0, 0, 0.6);
+}
+
+.filters__list input[type="radio"]:active + .radio-indicator {
+  border-color: #000000;
+}
+
+.filters__list input[type="radio"]:checked + .radio-indicator::after {
+  content: "";
+
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+
+  width: 9px;
+  height: 9px;
+  margin-left: -4.5px;
+  margin-top: -4.5px;
+
+  background-color: #000000;
+  border-radius: 50%;
+}
+
+.filters__list input[type="radio"]:checked:hover + .radio-indicator::after,
+.filters__list input[type="radio"]:checked:focus + .radio-indicator::after {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.filters__list input[type="radio"]:checked:active + .radio-indicator::after {
+  background-color: #000000;
+}
+
+
+
+
 
 .filters__form .button {
   margin-left: -1px;
@@ -1201,10 +1446,6 @@ body .button {
   color: rgba(0, 0, 0, 0.2);
 }
 
-/* .header-site-navigation__list > li:hover .header-site-navigation__sub-list {
-  display: flex;
-} */
-
 .catalog__flag--new::after{
   content: "new";
 
@@ -1252,10 +1493,12 @@ body .button {
   width: 100%;
   margin-top: -11px;
 
-  background: linear-gradient(
+  background-color: #ebebeb;
+
+  /* background: linear-gradient(
     rgba(255, 0, 0, 0.3) 1px,
     rgba(255, 0, 0, 0.15) 1px, rgba(255, 0, 0, 0.15) calc(100% - 1px),
-    rgba(255, 0, 0, 0.3) calc(100% - 1px));
+    rgba(255, 0, 0, 0.3) calc(100% - 1px)); */
 }
 
 .pagination-numbers__list {
@@ -1311,7 +1554,6 @@ body .button {
 
 body {
   position: relative;
-  /* background-image: none; */
 }
 
 .modal {
@@ -1441,9 +1683,555 @@ body {
 
 
 
+.main-popular__list {
+  list-style: none;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-popular__item {
+  width: 160px;
+}
+
+.main-popular__line h3 {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  letter-spacing: 0.18px;
+  color: black;
+}
+
+.main-popular-item__background {
+  width: 160px;
+  height: 160px;
+  background-color: rgba(240, 197, 46, 0.5);
+  margin-bottom: 33px;
+}
+
+.main-popular__item:hover .main-popular-item__background {
+  background-color: rgba(240, 197, 46, 1);
+}
+
+.main-popular__item:active img,
+.main-popular__item:active h3 {
+  opacity: 0.3;
+}
+
+.main-popular-item__image--virt-real {
+  margin-top: 52px;
+  margin-left: 31px;
+}
+
+.main-popular-item__image--monopods {
+  margin-top: 41px;
+  margin-left: 38px;
+}
+
+.main-popular-item__image--cameras {
+  margin-top: 38px;
+  margin-left: 49px;
+}
+
+.main-popular-item__image--bracelets {
+  margin-top: 50px;
+  margin-left: 28px;
+}
+
+.main-popular-item__image--smartwatch {
+  margin-top: 32px;
+  margin-left: 55px;
+}
+
+.main-popular-item__image--quadcopters {
+  margin-top: 49px;
+  margin-left: 13px;
+}
+
+
+
+.main-partners__line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 136px;
+}
+
+.main-partners__line a {
+  width: 260px;
+  height: auto;
+}
+
+.main-partners__line a img {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  opacity: 0.2;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+
+.main-partners__line a img:hover {
+  -webkit-filter: none;
+  -moz-filter: none;
+  -ms-filter: none;
+  -o-filter: none;
+  filter: none;
+  opacity: 1;
+}
+
+
+
+
+
+.main__slider--products {
+  margin-bottom: 86px;
+  position: relative;
+}
+
+.main-slider-products__slider-controls {
+  position: absolute;
+  bottom: 149px;
+  right: 87px;
+  z-index: 20;
+
+  font-size: 0;
+}
+
+.main-slider-products__slider-controls label {
+  position: relative;
+
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  padding: 6px;
+  margin-left: 9px;
+
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.main-slider-products__slider-controls label::after {
+  content: "";
+
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 1;
+
+  width: 10px;
+  height: 10px;
+
+  background-color: transparent;
+  border: 1px solid #000000;
+  border-radius: 50%;
+}
+
+.main-slider-products__list {
+  list-style: none;
+}
+
+.main-slider-products__item {
+  min-height: 520px;
+  display: none;
+  justify-content: space-between;
+}
+
+#main-slider-products__slide--1:checked ~ .main-slider-products__list .main-slider-products__item:nth-child(1) {
+  display: flex;
+}
+
+#main-slider-products__slide--2:checked ~ .main-slider-products__list .main-slider-products__item:nth-child(2) {
+  display: flex;
+}
+
+#main-slider-products__slide--3:checked ~ .main-slider-products__list .main-slider-products__item:nth-child(3) {
+  display: flex;
+}
+
+#main-slider-products__slide--1:checked ~ .main-slider-products__slider-controls label:nth-child(1)::before,
+#main-slider-products__slide--2:checked ~ .main-slider-products__slider-controls label:nth-child(2)::before,
+#main-slider-products__slide--3:checked ~ .main-slider-products__slider-controls label:nth-child(3)::before {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+
+  width: 4px;
+  height: 4px;
+  margin-top: -3px;
+  margin-left: -3px;
+
+  border: 1px solid #000000;
+
+  border-radius: 50%;
+}
+
+
+.main-slider-products__column--1 {
+  width: 564px;
+  display: flex;
+}
+
+.main-slider-products__column--1 > a {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  flex-shrink: 0;
+}
+
+.main-slider-products__item--selfie-8-meters  .main-slider-products__image {
+  margin-top: 14px;
+}
+
+.main-slider-products__item--bracelets-48-hours  .main-slider-products__image {
+  margin-top: 26px;
+}
+
+.main-slider-products__item--quadcopter-laser-50  .main-slider-products__image {
+  margin-top: 79px;
+}
+
+.main-slider-products__column--2 {
+  order: 2;
+  width: 501px;
+  padding-top: 93px;
+  margin-right: 60px;
+  position: relative;
+}
+
+.main-slider-products__column--2::before {
+  content: "";
+
+  position: absolute;
+
+  top: 51px;
+  left: 1px;
+
+  width: 100px;
+  height: 7px;
+
+  background: white;
+}
+
+.main-slider-products__column--2::after {
+  content: "01";
+
+  position: absolute;
+
+  top: 0px;
+  right: -13px;
+
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 179px;
+  line-height: 179px;
+  font-weight: 800;
+  letter-spacing: 1.79px;
+  color: white;
+}
+
+.main-slider-products__item--selfie-8-meters  .main-slider-products__column--2::after {
+  content: "01";
+}
+
+.main-slider-products__item--bracelets-48-hours  .main-slider-products__column--2::after {
+  content: "02";
+}
+
+.main-slider-products__item--quadcopter-laser-50  .main-slider-products__column--2::after {
+  content: "03";
+}
+
+.main-slider-products__column--2 h3 {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 47px;
+  line-height: 56px;
+  font-weight: 800;
+  letter-spacing: 0.47px;
+
+  margin-bottom: 19px;
+
+  position: relative;
+  z-index: 2;
+}
+
+.main-slider-products__column--2 p {
+  color: #464646;
+  margin-bottom: 43px;
+}
+
+.main-slider-products__item--selfie-8-meters  p {
+  width: 481px;
+}
+
+.main-slider-products__item--bracelets-48-hours  p {
+  width: 441px;
+}
+
+.main-slider-products__item--quadcopter-laser-50  p {
+  width: 451px;
+}
+
+.main-slider-products__column--2  .button {
+  margin-left: 1px;
+  margin-bottom: 51px;
+}
+
+.main-slider-products__buttons--slider-controls {
+  margin-left: auto;
+}
+
+.main-slider-products__table {
+  display: flex;
+}
+
+.main-slider-products__table > div {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.main-slider-products__table--row > div:first-child {
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.13px;
+  color: #464646;
+
+  margin-left: 1px;
+  margin-right: 79px;
+}
+
+.main-slider-products__table--row > div:last-child {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 300;
+  letter-spacing: 0.36px;
+
+  margin-bottom: 8px;
+}
+
+
+
+
+.main__slider--services {
+  min-height: 388px;
+  background: linear-gradient(
+    transparent 100px,
+    #e5e5e5 100px);
+  margin-bottom: 94px;
+  position: relative;
+}
+
+.main__slider--services::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: calc(50% - 303px);
+
+  width: 7px;
+  height: calc(100% - 69px);
+
+  background-color: black;
+}
+
+.main-slider-services__slider-controls {
+  position: absolute;
+  top: 80px;
+  left: calc(50% - 580px);
+  z-index: 20;
+
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.main-slider-services__slider-controls label {
+  position: relative;
+
+  min-width: 130px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-bottom: 25px;
+
+  cursor: pointer;
+
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  letter-spacing: 3.6px;
+  color: #000000;
+
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background: linear-gradient(
+    transparent calc(50% - 4px),
+    #f0c52e calc(50% - 4px), #f0c52e calc(50% + 4px),
+    transparent calc(50% + 4px));
+  border: none;
+}
+
+.main-slider-services__slider-controls label:hover,
+.main-slider-services__slider-controls label:focus {
+  background: #f0c52e;
+}
+
+.main-slider-services__slider-controls label:active {
+  background: black;
+  color: #f7e184;
+}
+
+.main-slider-services__slider-controls label:active::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  width: 280px;
+  height: 40px;
+
+  background-color: black;
+}
+
+.main-slider-services__item {
+  display: none;
+}
+
+#main-slider-services__slide--1:checked ~ .main-slider-services__list .main-slider-services__item:nth-child(1) {
+  display: block;
+}
+
+#main-slider-services__slide--2:checked ~ .main-slider-services__list .main-slider-services__item:nth-child(2) {
+  display: block;
+}
+
+#main-slider-services__slide--3:checked ~ .main-slider-services__list .main-slider-services__item:nth-child(3) {
+  display: block;
+}
+
+#main-slider-services__slide--1:checked ~ .main-slider-services__slider-controls label:nth-child(1),
+#main-slider-services__slide--2:checked ~ .main-slider-services__slider-controls label:nth-child(2),
+#main-slider-services__slide--3:checked ~ .main-slider-services__slider-controls label:nth-child(3) {
+  background: black;
+  color: #f7e184;
+}
+
+#main-slider-services__slide--1:checked ~ .main-slider-services__slider-controls label:nth-child(1)::after,
+#main-slider-services__slide--2:checked ~ .main-slider-services__slider-controls label:nth-child(2)::after,
+#main-slider-services__slide--3:checked ~ .main-slider-services__slider-controls label:nth-child(3)::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  width: 280px;
+  height: 40px;
+
+  background-color: black;
+}
+
+.main-slider-services__list {
+  margin-left: 400px;
+  list-style: none;
+}
+
+.main-slider-services__item {
+  padding-top: 73px;
+  padding-right: 320px;
+  padding-bottom: 20px;
+  min-height: 295px;
+}
+
+.main-slider-services__item--delivery {
+  background-image: url("../img/slider-services--delivery.svg");
+  background-repeat: no-repeat;
+  background-position: 558px 85px;
+}
+
+.main-slider-services__item--warranty {
+  background-image: url("../img/slider-services--warranty.svg");
+  background-repeat: no-repeat;
+  background-position: 543px 61px;
+}
+
+.main-slider-services__item--credit {
+  background-image: url("../img/slider-services--credit.svg");
+  background-repeat: no-repeat;
+  background-position: 534px 61px;
+}
+
+.main-slider-services__item h3 {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  font-weight: 800;
+  letter-spacing: 0.47px;
+
+  margin-bottom: 31px;
+}
+
+.main-slider-services__item p {
+  color: #464646
+}
+
+
+
+
+
+
+
+/* ----- Сеточные стили ----- */
+html,
+body {
+  /* Временно для сетки */
+  min-width: 1440px;
+  /* min-height: 2795px; */
+}
+
+body {
+  background-size: 1160px 339px;
+  /* Временно для сетки */
+  /* background-image: url("../Device-Index.png"); */
+  /* background-image: url("../Device-Index-Modals.png"); */
+  /* background-size: 1440px auto; */
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.inner-page {
+  /* Временно для сетки */
+  /* background-image: url("../Device-Catalog.png"); */
+  /* background-image: url("../Device-Catalog-Hovers.png"); */
+  background-size: 1160px 226px;
+  /* background-size: 1440px auto; */
+}
+
 /* Временно для сетки */
 .header {
-  margin-bottom: 1685px;
+  margin-bottom: 34px;
+}
+
+.main-popular__line {
+  margin-bottom: 81px;
 }
 
 /* Временно для сетки */

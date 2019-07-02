@@ -76,11 +76,197 @@
   </header>
 
 
-  <main class="container main-container">
+  <main class="main-container">
 
     <h1 class="visually-hidden">Интернет-магазин гаджетов «Девайс»</h1>
 
-    <div class="main__info-line">
+    <section class="container  main__slider--products">
+      <h2 class="visually-hidden">Наиболее интересные товары:</h2>
+      <input class="visually-hidden" type="radio" id="main-slider-products__slide--1" name="main-slider-products__toggle" checked>
+      <input class="visually-hidden" type="radio" id="main-slider-products__slide--2" name="main-slider-products__toggle">
+      <input class="visually-hidden" type="radio" id="main-slider-products__slide--3" name="main-slider-products__toggle">
+      <div class="main-slider-products__slider-controls">
+        <label for="main-slider-products__slide--1">Первый</label>
+        <label for="main-slider-products__slide--2">Второй</label>
+        <label for="main-slider-products__slide--3">Третий</label>
+      </div>
+      <ul class="main-slider-products__list">
+        <li class="main-slider-products__item  main-slider-products__item--selfie-8-meters">
+          <div class="main-slider-products__column--2">
+            <h3>Делай селфи, <br> как Бен Стиллер!</h3>
+            <p>Самая длинная палка для селфи доступна в нашем магазине.
+              Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+            <a class="button" href="#">Подробнее</a>
+            <div class="main-slider-products__table">
+              <div class="main-slider-products__table--row"><div>Длина палки</div><div>8,5 м</div></div>
+              <div class="main-slider-products__table--row"><div>Вес палки</div><div>5 кг</div></div>
+              <div class="main-slider-products__table--row"><div>Материал</div><div>Карбон</div></div>
+            </div>
+          </div>
+          <div class="main-slider-products__column--1">
+            <a href="#">
+              <img class="main-slider-products__image" src="img/slider-products--selfie-8-meters.png"
+              width="384" height="486" alt="Селфи-палка длинной 8 метров">
+            </a>
+          </div>
+        </li>
+
+        <li class="main-slider-products__item  main-slider-products__item--bracelets-48-hours">
+          <div class="main-slider-products__column--2">
+            <h3>Худеем <br> правильно!</h3>
+            <p>Мотивирующие фитнес-браслеты помогут найти в себе силы
+              не пропускать занятия и соблюдать диету.</p>
+            <a class="button" href="#">Подробнее</a>
+            <div class="main-slider-products__table">
+              <div class="main-slider-products__table--row"><div>Без подзарядки</div><div>48 часов</div></div>
+            </div>
+          </div>
+          <div class="main-slider-products__column--1">
+            <a href="#">
+              <img class="main-slider-products__image" src="img/slider-products--bracelets-48-hours.png"
+              width="345" height="485" alt="Селфи-палка длинной 8 метров">
+            </a>
+          </div>
+        </li>
+
+        <li class="main-slider-products__item  main-slider-products__item--quadcopter-laser-50">
+          <div class="main-slider-products__column--2">
+            <h3>Порхает как бабочка, жалит как пчела!</h3>
+            <p>Этот обычный, на первый взгляд, квадрокоптер оснащен
+              мощным лазером, замаскированным под стандартную камеру.</p>
+            <a class="button" href="#">Подробнее</a>
+            <div class="main-slider-products__table">
+              <div class="main-slider-products__table--row"><div>Дальность полета</div><div>800 м</div></div>
+              <div class="main-slider-products__table--row"><div>Радиус поражения</div><div>50 м</div></div>
+            </div>
+          </div>
+          <div class="main-slider-products__column--1">
+            <a href="#">
+              <img class="main-slider-products__image" src="img/slider-products--quadcopter-laser-50.png"
+              width="526" height="334" alt="Селфи-палка длинной 8 метров">
+            </a>
+          </div>
+        </li>
+      </ul>
+
+
+    </section>
+
+    <section class="container  main-popular__line">
+      <h2 class="visually-hidden">Популярные разделы каталога:</h2>
+      <ul class="main-popular__list">
+        <li class="main-popular__item">
+          <a href="#">
+            <div class="main-popular-item__background">
+              <img class="main-popular-item__image--virt-real" src="img/popular-virt-real.svg"
+              width="97" height="55" alt="Виртуальная реальность">
+            </div>
+            <h3>Виртуальная реальность</h3>
+          </a>
+        </li>
+        <li class="main-popular__item">
+          <a href="#">
+            <div class="main-popular-item__background">
+              <img class="main-popular-item__image--monopods" src="img/popular-monopods.svg"
+              width="86" height="117" alt="Моноподы для селфи">
+            </div>
+            <h3>Моноподы <br> для селфи</h3>
+          </a>
+        </li>
+        <li class="main-popular__item">
+          <a href="#">
+            <div class="main-popular-item__background">
+              <img class="main-popular-item__image--cameras" src="img/popular-cameras.svg"
+              width="71" height="87" alt="Экшн-камеры">
+            </div>
+            <h3>Экшн-камеры</h3>
+          </a>
+        </li>
+        <li class="main-popular__item">
+          <a href="#">
+            <div class="main-popular-item__background">
+              <img class="main-popular-item__image--bracelets" src="img/popular-bracelets.svg"
+              width="107" height="65" alt="Фитнес-браслеты">
+            </div>
+            <h3>Фитнес-браслеты</h3>
+          </a>
+        </li>
+        <li class="main-popular__item">
+          <a href="#">
+            <div class="main-popular-item__background">
+              <img class="main-popular-item__image--smartwatch" src="img/popular-smartwatch.svg"
+              width="56" height="98" alt="Умные часы">
+            </div>
+            <h3>Умные часы</h3>
+          </a>
+        </li>
+        <li class="main-popular__item">
+          <a href="#">
+            <div class="main-popular-item__background">
+              <img class="main-popular-item__image--quadcopters" src="img/popular-quadcopters.svg"
+              width="132" height="69" alt="Квадрокоптеры">
+            </div>
+            <h3>Квадрокоптеры</h3>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="main__slider--services">
+      <div class="container">
+        <h2 class="visually-hidden">Наши сервисы:</h2>
+        <input class="visually-hidden" type="radio" id="main-slider-services__slide--1" name="main-slider-services__toggle" checked>
+        <input class="visually-hidden" type="radio" id="main-slider-services__slide--2" name="main-slider-services__toggle">
+        <input class="visually-hidden" type="radio" id="main-slider-services__slide--3" name="main-slider-services__toggle">
+        <div class="main-slider-services__slider-controls">
+          <label for="main-slider-services__slide--1">Доставка</label>
+          <label for="main-slider-services__slide--2">Гарантия</label>
+          <label for="main-slider-services__slide--3">Кредит</label>
+        </div>
+        <ul class="main-slider-services__list">
+          <li class="main-slider-services__item  main-slider-services__item--delivery">
+            <h3>Доставка</h3>
+            <p>Мы с удовольствием доставим ваш товар прямо к вашему
+              подъезду совершенно бесплатно! Ведь мы неплохо
+              заработаем, поднимая его на ваш этаж.</p>
+          </li>
+          <li class="main-slider-services__item  main-slider-services__item--warranty">
+            <h3>Гарантия</h3>
+            <p>Если из-за возгорания купленного у нас товара у вас сгорит
+              дом — не переживайте, мы выдадим вам новый. <br>
+              Товар, не дом, конечно же.</p>
+          </li>
+          <li class="main-slider-services__item  main-slider-services__item--credit">
+            <h3>Кредит</h3>
+            <p>Залезть в долговую яму стало проще! Кредитные
+              консультанты подберут для вас наиболее выгодные
+              условия кредита. Выгодные для нашего банка, разумеется.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="container  main-partners__line">
+      <h2 class="visually-hidden">У нас представлена продукция:</h2>
+      <a href="#">
+        <img src="img/partners-dji-color.jpg" width="260" height="100" alt
+        ="Продукция компании DJI">
+      </a>
+      <a href="#">
+        <img src="img/partners-sp-gadgets.jpg" width="260" height="100" alt
+        ="Продукция компании SP Gadgets">
+      </a>
+      <a href="#">
+        <img src="img/partners-gopro.jpg" width="260" height="100" alt
+        ="Продукция компании GoPro">
+      </a>
+      <a href="#">
+        <img src="img/partners-vive.jpg" width="260" height="100" alt
+        ="Продукция компании VIVE">
+      </a>
+    </section>
+
+    <div class="container  main__info-line">
       <section class="main-about-us">
         <h2>О нас</h2>
         <div class="main-about-us__text">

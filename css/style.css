@@ -365,7 +365,7 @@ img {
 
 .header-site-navigation__sub-list {
   position: absolute;
-  z-index: 200;
+  z-index: 100;
 
   padding-top: 21px;
 
@@ -407,6 +407,7 @@ img {
 .header-site-navigation__sub-list--column-3 li {
   margin-bottom: 6px;
 }
+
 
 
 .main__slider--products {
@@ -1192,9 +1193,9 @@ img {
 
   /* Временно для сетки */
 
-  background: linear-gradient(to right,
+  /* background: linear-gradient(to right,
     rgba(235, 235, 235, 0.5) calc(50% - 253px),
-    rgba(255, 255, 255, 0) calc(50% - 253px));
+    rgba(255, 255, 255, 0) calc(50% - 253px)); */
 }
 
 .inner-page-columns__flex-columns {
@@ -1332,12 +1333,6 @@ img {
 
 .filters__form ul {
   list-style: none;
-
-  font-family: "Open Sans", Arial, sans-serif;
-  font-size: 14px;
-  line-height: 40px;
-  font-weight: 300;
-  letter-spacing: 0.14px;
 }
 
 .filters__list li {
@@ -1346,35 +1341,16 @@ img {
   position: relative;
 }
 
-.filters__list label {
+.filters-item__label {
   padding-right: 10px;
   cursor: pointer;
+
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: 300;
+  letter-spacing: 0.14px;
 }
-
-
-
-
-
-.filters__form input:hover,
-.filters__form input:focus {
-  opacity: 0.6;
-}
-
-.filters__form input:active {
-  opacity: 1;
-}
-
-.filters__form input:disabled {
-  opacity: 0.25;
-}
-
-.filters__form input:disabled + label {
-  color: #a6a6a6;
-}
-
-
-
-
 
 .filters__list input[type="checkbox"] + .checkbox-indicator {
   position: absolute;
@@ -1507,6 +1483,19 @@ img {
 
 .filters__list input[type="radio"]:checked:active + .radio-indicator::after {
   background-color: #000000;
+}
+
+.filters__form input:disabled + .checkbox-indicator,
+.filters__form input:disabled + .radio-indicator {
+  opacity: 0.25;
+}
+
+.filters-item__label div {
+  display: inline-block;
+}
+
+.filters__form input:disabled ~ div {
+  color: #a6a6a6;
 }
 
 .filters__form .button {
@@ -1980,22 +1969,21 @@ img {
 
 
 
-
-
 .modal {
-  position: absolute;
-
-  left: 50%;
-  width: 960px;
-  margin-left: -480px;
-
-  box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
-
+  position: fixed;
   display: none;
+  top: 50%;
+  left: 50%;
+  margin-top: -300px;
+  margin-left: -480px;
+  width: 960px;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
+  opacity: 1;
+  z-index: 200;
 }
 
 .modal--message {
-  top: 1057px;
   min-height: 553px;
 }
 
@@ -2024,8 +2012,8 @@ img {
   margin-bottom: 7px;
 }
 
-.modal-message__item input,
-.modal-message__item textarea {
+.modal-message-item__input,
+.modal-message-item__textarea {
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -2045,19 +2033,19 @@ img {
   /* background: transparent; */
 }
 
-.modal-message__item textarea {
+.modal-message-item__textarea {
   width: 720px;
   height: 125px;
   resize: none;
 }
 
-.modal-message__item input:hover,
-.modal-message__item textarea:hover {
+.modal-message-item__input:hover,
+.modal-message-item__textarea:hover {
   background-color: #eaeaea;
 }
 
-.modal-message__item input:focus,
-.modal-message__item textarea:focus {
+.modal-message-item__input:focus,
+.modal-message-item__textarea:focus {
   color: #464646;
   border: solid 3px rgba(240, 197, 46, 0.5);
   background-color: #ffffff;
@@ -2073,7 +2061,6 @@ img {
 }
 
 .modal--map {
-  top: 1852px;
   height: 559px;
 }
 
@@ -2106,6 +2093,31 @@ img {
   opacity: 0.3;
 }
 
+.overlay {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 40;
+}
+
+.modal-show {
+  display: block;
+
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+.modal-message__item--error {
+  background-color: #f6dada;
+}
+
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
@@ -2126,7 +2138,47 @@ input[type="radio"].visually-hidden {
 }
 
 
+@keyframes bounce {
+  0% {
+    transform: translateX(-2000px);
+  }
 
+  70% {
+    transform: translateX(30px);
+  }
+
+  90% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
 
 
 

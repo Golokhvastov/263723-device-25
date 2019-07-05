@@ -5,13 +5,12 @@
   <title>HTML Academy: Девайс</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body>
-
   <header class="container header">
     <nav class="header__navigation">
-      <a class="header__logo" href="index.html">
+      <a class="header__logo">
         <img src="img/logo.svg" width="163" height="35" alt
         ="Логотип интернет-магазина гаджетов «Девайс»">
       </a>
@@ -20,9 +19,10 @@
         <form class="header-search__form" action="https://echo.htmlacademy.ru" method="post">
           <label for="search" class="visually-hidden">Поиск по сайту:</label>
           <input id="search" class="header-search__input" type="text" name="search" value="" placeholder="Поиск по сайту">
-          <button class="header-search__button" type="submit">Найти</button>
+          <button class="header-search__button" type="submit">
+            Найти
+          </button>
         </form>
-
         <ul class="header-user-navigation__list">
           <li><a class="header-user-navigation__link--user" href="#">Войти</a></li>
           <li><a class="header-user-navigation__link--compare" href="#">Сравнить</a></li>
@@ -36,34 +36,20 @@
           <ul class="header-site-navigation__sub-list">
             <li>
               <ul class="header-site-navigation__sub-list--column-1">
-                <li>
-                  <a href="#">Виртуальная реальность</a>
-                </li>
-                <li>
-                  <a href="catalog.html">Моноподы для селфи</a>
-                </li>
-                <li>
-                  <a href="#">Экшн-камеры</a>
-                </li>
+                <li><a href="#">Виртуальная реальность</a></li>
+                <li><a href="catalog.html">Моноподы для селфи</a></li>
+                <li><a href="#">Экшн-камеры</a></li>
               </ul>
             </li>
-
             <li>
               <ul class="header-site-navigation__sub-list--column-2">
-                <li>
-                  <a href="#">Фитнес-браслеты</a>
-                </li>
-                <li>
-                  <a href="#">Умные часы</a>
-                </li>
+                <li><a href="#">Фитнес-браслеты</a></li>
+                <li><a href="#">Умные часы</a></li>
               </ul>
             </li>
-
             <li>
               <ul class="header-site-navigation__sub-list--column-3">
-                <li>
-                  <a href="#">Квадрокоптеры</a>
-                </li>
+                <li><a href="#">Квадрокоптеры</a></li>
               </ul>
             </li>
           </ul>
@@ -72,16 +58,17 @@
         <li><a href="#">Гарантия</a></li>
         <li><a href="#">Контакты</a></li>
       </ul>
+
     </nav>
   </header>
 
 
   <main class="main-container">
-
     <h1 class="visually-hidden">Интернет-магазин гаджетов «Девайс»</h1>
 
     <section class="container  main__slider--products">
       <h2 class="visually-hidden">Наиболее интересные товары:</h2>
+
       <input class="visually-hidden" type="radio" id="main-slider-products__slide--1" name="main-slider-products__toggle" checked>
       <input class="visually-hidden" type="radio" id="main-slider-products__slide--2" name="main-slider-products__toggle">
       <input class="visually-hidden" type="radio" id="main-slider-products__slide--3" name="main-slider-products__toggle">
@@ -90,13 +77,16 @@
         <label for="main-slider-products__slide--2">Второй</label>
         <label for="main-slider-products__slide--3">Третий</label>
       </div>
+
       <ul class="main-slider-products__list">
         <li class="main-slider-products__item  main-slider-products__item--selfie-8-meters">
           <div class="main-slider-products__column--2">
             <h3>Делай селфи, <br> как Бен Стиллер!</h3>
             <p>Самая длинная палка для селфи доступна в нашем магазине.
               Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-            <a class="button" href="#">Подробнее</a>
+            <a class="button" href="#">
+              Подробнее
+            </a>
             <div class="main-slider-products__table">
               <div class="main-slider-products__table--row"><div>Длина палки</div><div>8,5 м</div></div>
               <div class="main-slider-products__table--row"><div>Вес палки</div><div>5 кг</div></div>
@@ -147,13 +137,13 @@
             </a>
           </div>
         </li>
+
       </ul>
-
-
     </section>
 
     <section class="container  main-popular__line">
       <h2 class="visually-hidden">Популярные разделы каталога:</h2>
+
       <ul class="main-popular__list">
         <li class="main-popular__item">
           <a href="#">
@@ -164,15 +154,17 @@
             <h3>Виртуальная реальность</h3>
           </a>
         </li>
+
         <li class="main-popular__item">
-          <a href="#">
+          <a href="catalog.html">
             <div class="main-popular-item__background">
               <img class="main-popular-item__image--monopods" src="img/popular-monopods.svg"
               width="86" height="117" alt="Моноподы для селфи">
             </div>
-            <h3>Моноподы <br> для селфи</h3>
+            <h3 class="main-popular-item__h3--width">Моноподы для селфи</h3>
           </a>
         </li>
+
         <li class="main-popular__item">
           <a href="#">
             <div class="main-popular-item__background">
@@ -182,6 +174,7 @@
             <h3>Экшн-камеры</h3>
           </a>
         </li>
+
         <li class="main-popular__item">
           <a href="#">
             <div class="main-popular-item__background">
@@ -191,6 +184,7 @@
             <h3>Фитнес-браслеты</h3>
           </a>
         </li>
+
         <li class="main-popular__item">
           <a href="#">
             <div class="main-popular-item__background">
@@ -200,6 +194,7 @@
             <h3>Умные часы</h3>
           </a>
         </li>
+
         <li class="main-popular__item">
           <a href="#">
             <div class="main-popular-item__background">
@@ -209,12 +204,14 @@
             <h3>Квадрокоптеры</h3>
           </a>
         </li>
+
       </ul>
     </section>
 
     <section class="main__slider--services">
-      <div class="container">
+      <div class="container  main-slider-services__container--flex">
         <h2 class="visually-hidden">Наши сервисы:</h2>
+
         <input class="visually-hidden" type="radio" id="main-slider-services__slide--1" name="main-slider-services__toggle" checked>
         <input class="visually-hidden" type="radio" id="main-slider-services__slide--2" name="main-slider-services__toggle">
         <input class="visually-hidden" type="radio" id="main-slider-services__slide--3" name="main-slider-services__toggle">
@@ -223,6 +220,7 @@
           <label for="main-slider-services__slide--2">Гарантия</label>
           <label for="main-slider-services__slide--3">Кредит</label>
         </div>
+
         <ul class="main-slider-services__list">
           <li class="main-slider-services__item  main-slider-services__item--delivery">
             <h3>Доставка</h3>
@@ -230,37 +228,40 @@
               подъезду совершенно бесплатно! Ведь мы неплохо
               заработаем, поднимая его на ваш этаж.</p>
           </li>
+
           <li class="main-slider-services__item  main-slider-services__item--warranty">
             <h3>Гарантия</h3>
             <p>Если из-за возгорания купленного у нас товара у вас сгорит
               дом — не переживайте, мы выдадим вам новый. <br>
               Товар, не дом, конечно же.</p>
           </li>
+
           <li class="main-slider-services__item  main-slider-services__item--credit">
             <h3>Кредит</h3>
             <p>Залезть в долговую яму стало проще! Кредитные
               консультанты подберут для вас наиболее выгодные
               условия кредита. Выгодные для нашего банка, разумеется.</p>
           </li>
+
         </ul>
       </div>
     </section>
 
     <section class="container  main-partners__line">
       <h2 class="visually-hidden">У нас представлена продукция:</h2>
-      <a href="#">
+      <a class="main-partners__link  main-partners__link--dji" href="#">
         <img src="img/partners-dji-color.jpg" width="260" height="100" alt
         ="Продукция компании DJI">
       </a>
-      <a href="#">
+      <a class="main-partners__link  main-partners__link--sp-gadgets" href="#">
         <img src="img/partners-sp-gadgets.jpg" width="260" height="100" alt
         ="Продукция компании SP Gadgets">
       </a>
-      <a href="#">
+      <a class="main-partners__link  main-partners__link--gopro" href="#">
         <img src="img/partners-gopro.jpg" width="260" height="100" alt
         ="Продукция компании GoPro">
       </a>
-      <a href="#">
+      <a class="main-partners__link  main-partners__link--vive" href="#">
         <img src="img/partners-vive.jpg" width="260" height="100" alt
         ="Продукция компании VIVE">
       </a>
@@ -275,25 +276,27 @@
           <p>Мы можем доставить ваш товар в самые отдаленные точки России!
             DEVICE работает со многими транспортными компаниями:</p>
         </div>
-        <ul class="transport-company__list">
+        <ul class="main-about-us__list--transport-company">
           <li>Деловые Линии</li>
           <li>Автотрейдинг</li>
           <li>ЖелДорЭкспедиция</li>
         </ul>
-        <a class="button" href="#">Подробнее о нас</a>
+        <a class="button" href="#">
+          Подробнее о нас
+        </a>
       </section>
 
       <section class="main-contacts">
         <h2>Контакты</h2>
-        <div class="main-contacts__text">
-          <p>Вы можете забрать товар сама, заехав в наш офис. Заодно, вы сможете
-          проверить работоспособность покупки. Всякое бывает.</p>
-        </div>
-        <a class="main-contacts__map" href="#">
+        <p class="main-contacts__text">Вы можете забрать товар сама, заехав в наш офис. Заодно, вы сможете
+        проверить работоспособность покупки. Всякое бывает.</p>
+        <a class="main-contacts__map" href="https://goo.gl/maps/2mqRLYmavrvtPf627">
           <img src="img/map.jpg" width="560" height="222" alt
           ="Офис магазина «Девайс» по адресу: Москва, улица Строителей, 15">
         </a>
-        <a class="button  main-contacts__button--write-to-us" href="#">Напишите нам</a>
+        <a class="button  main-contacts__button--write-to-us" href="#">
+          Напишите нам
+        </a>
       </section>
     </div>
 
@@ -303,7 +306,7 @@
   <footer class="footer-container">
     <div class="container">
       <div class="footer__first-line">
-        <a class="footer__logo" href="index.html">
+        <a class="footer__logo">
           <img src="img/logo-footer.svg" width="163" height="35" alt
           ="Логотип интернет-магазина гаджетов «Девайс»">
         </a>
@@ -321,7 +324,9 @@
           <li><a href="#">Гарантия</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
-        <p class="text-right">Тел.: +7 (495) 495-95-95</p>
+        <a class="footer__link--tel-number" href="tel:+74954959595">
+          Тел.: +7 (495) 495-95-95
+        </a>
       </div>
 
       <div class="footer__third-line">
@@ -345,22 +350,18 @@
             </a>
           </li>
         </ul>
-        <a class="footer-site-maker__logo" href="https://htmlacademy.ru">
+        <a class="footer-site-maker__logo" href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="img/logo-htmlacademy.svg" width="27" height="35" alt
           ="Сайт разработан студией «htmlacademy»">
         </a>
       </div>
+
     </div>
   </footer>
 
-  <section class="test">
-
-  </section>
 
   <section class="modal modal--message">
-    <h2 class="visually-hidden">
-      Написать письмо
-    </h2>
+    <h2 class="visually-hidden">Написать письмо</h2>
     <form class="modal-message__form" action="https://echo.htmlacademy.ru" method="post">
       <p class="modal-message__item">
         <label for="message-name">Ваше имя:</label>
@@ -384,97 +385,18 @@
   </section>
 
   <section class="modal modal--map">
-    <h2 class="visually-hidden">
-      Как до нас добраться
-    </h2>
+    <h2 class="visually-hidden">Как до нас добраться</h2>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779994!2d37.527429316223134!3d55.68703098053578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1561984532888!5m2!1sru!2sru"
-    width="960" height="559" style="border:0" allowfullscreen aria-label="Офис магазина «Девайс» по адресу: Москва, улица Строителей, 15"></iframe>
+    width="960" height="559" allowfullscreen aria-label="Офис магазина «Девайс» по адресу: Москва, улица Строителей, 15"></iframe>
+    <img src="img/map-big.jpg" width="960" height="559" alt
+    ="Офис магазина «Девайс» по адресу: Москва, улица Строителей, 15">
     <button class="modal-close__button" type="button" aria-label="Закрыть"></button>
   </section>
 
   <div class="overlay"></div>
 
 
-  <script>
-  var message__link = document.querySelector(".main-contacts__button--write-to-us");
-  var map__link = document.querySelector(".main-contacts__map");
-
-  var message__popup = document.querySelector(".modal--message");
-  var map__popup = document.querySelector(".modal--map");
-
-  var message__close = message__popup.querySelector(".modal--message .modal-close__button");
-  var map__close = map__popup.querySelector(".modal--map .modal-close__button");
-
-  var message__form = message__popup.querySelector(".modal-message__form");
-  var message__name = message__popup.querySelector("[name=name]");
-  var message__email = message__popup.querySelector("[name=email]");
-  var message__text = message__popup.querySelector("[name=text]");
-
-  message__link.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    message__popup.classList.add("modal-show");
-    message__name.focus();
-  });
-
-  message__close.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    message__popup.classList.remove("modal-show");
-    message__popup.classList.remove("modal-error");
-  });
-
-  map__link.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    map__popup.classList.add("modal-show");
-  });
-
-  map__close.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    map__popup.classList.remove("modal-show");
-  });
-
-  message__form.addEventListener("submit", function (evt) {
-    if (!message__name.value || !message__email.value || !message__text.value) {
-      evt.preventDefault();
-      message__popup.classList.remove("modal-error");
-      message__popup.offsetWidth = message__popup.offsetWidth;
-      message__popup.classList.add("modal-error");
-      if (!message__name.value) {
-        message__name.classList.add("modal-message__item--error");
-      } else {
-        if (message__name.classList.contains("modal-message__item--error")) {
-          message__name.classList.remove("modal-message__item--error");
-        }
-      }
-      if (!message__email.value) {
-        message__email.classList.add("modal-message__item--error");
-      } else {
-        if (message__email.classList.contains("modal-message__item--error")) {
-          message__email.classList.remove("modal-message__item--error");
-        }
-      }
-      if (!message__text.value) {
-        message__text.classList.add("modal-message__item--error");
-      } else {
-        if (message__text.classList.contains("modal-message__item--error")) {
-          message__text.classList.remove("modal-message__item--error");
-        }
-      }
-    }
-  });
-
-  window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-      evt.preventDefault();
-      if (message__popup.classList.contains("modal-show")) {
-        message__popup.classList.remove("modal-show");
-        message__popup.classList.remove("modal-error");
-      }
-      if (map__popup.classList.contains("modal-show")) {
-        map__popup.classList.remove("modal-show");
-      }
-    }
-  });
-</script>
+  <script src="js/scripts.min.js"></script>
 
 </body>
 </html>

@@ -130,8 +130,8 @@ img {
 
 .header__logo {
     width: 163px;
-    height: 35px;
-    margin-bottom: 18px;
+    min-height: 35px;
+    margin-bottom: 9px;
 }
 
 .inner-page .header__logo:hover,
@@ -642,8 +642,10 @@ img {
 }
 
 .main-popular-item__background {
+    display: flex;
+    align-items: flex-start;
     width: 160px;
-    height: 160px;
+    min-height: 160px;
     margin-bottom: 33px;
     background-color: rgba(240, 197, 46, .5);
 }
@@ -1655,12 +1657,12 @@ img {
 .footer__first-line {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 21px;
 }
 
 .footer__logo {
     width: 163px;
-    height: 35px;
+    min-height: 35px;
 }
 
 .inner-page .footer__logo:hover,
@@ -1856,7 +1858,7 @@ img {
 
 .footer-site-maker__logo {
     width: 27px;
-    height: 35px;
+    min-height: 35px;
 }
 
 .footer-site-maker__logo:hover,
@@ -1890,7 +1892,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-top: 78px;
+    padding-top: 92px;
     padding-right: 100px;
     padding-left: 100px;
 }
@@ -1898,6 +1900,7 @@ img {
 .modal-message__item {
     display: flex;
     flex-direction: column;
+    padding-bottom: 31px;
 }
 
 .modal-message__item label {
@@ -1951,7 +1954,7 @@ img {
 
 .modal-message__button-container {
     width: 760px;
-    margin-top: 22px;
+    margin-top: 6px;
 }
 
 .modal--map {

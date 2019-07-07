@@ -27,6 +27,7 @@ message__close.addEventListener("click", function (evt) {
 map__link.addEventListener("click", function (evt) {
   evt.preventDefault();
   map__popup.classList.add("modal-show");
+  map__close.focus();
 });
 
 map__close.addEventListener("click", function (evt) {
